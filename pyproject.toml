@@ -2,18 +2,19 @@
 name = "civ-weave"
 version = "0.1.0"
 description = ""
-authors = ["James McNeill <james.mcneill@conjura.com>"]
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-kuzu = "^0.0.7"
-pydantic = "^2.3.0"
+python = "^3.12"
+pydantic = "^2.5.1"
+kuzu = "^0.1.0"
+
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^7.4.0"
-ruff = "^0.0.287"
-black = "^23.9.0"
+ruff = "^0.1.6"
+black = "^23.11.0"
+pytest = "^7.4.3"
 
 [build-system]
 requires = ["poetry-core"]
