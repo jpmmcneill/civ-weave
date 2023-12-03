@@ -22,6 +22,9 @@ mypy = "^1.7.1"
 select = ["ALL"]
 line-length = 79
 indent-width = 4
+ignore = ["D203", "D212", "ISC001"]
+# D203 and D212 lead to ugly docstrings IMO
+# ISC001 ignored to get rid of a conflict warning (even though it's a good rule)
 
 [build-system]
 requires = ["poetry-core"]
