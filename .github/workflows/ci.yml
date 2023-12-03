@@ -31,3 +31,5 @@ jobs:
         run: poetry run ruff format . --check
       - name: Type check with mypy
         run: poetry run mypy .
+      - name: Yaml Lint
+        run: poetry run yamllint .
