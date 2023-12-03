@@ -1,0 +1,12 @@
+- name: hamlet
+  min_population: 3
+  max_population: 49
+- name: village
+  min_population: 50
+  max_population: 299
+  num_resources: 1
+- name: town
+  min_population: 300
+  max_population: 799
+  num_important_features: 1
+  num_resources: 2
