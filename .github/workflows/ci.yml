@@ -26,6 +26,8 @@ jobs:
         run: poetry install
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - name: Ruff Lint
-        run: poetry run ruff check .
-      - name: Black Lint
-        run: poetry run black . --check
+        run: poetry run ruff .
+      - name: Ruff format
+        run: poetry run ruff format . --check
+      - name: Type check with mypy
+        run: poetry run mypy .
