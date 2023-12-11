@@ -10,6 +10,7 @@ def test_from_yaml():
     """Assert that the base yaml configuration loads correctly."""
     SettlementType.from_yaml()
 
+
 @patch("civ_weave.data.File.get_path", new_callable=PropertyMock)
 def test_yaml_content(get_path: PropertyMock):
     get_path.return_value = Path(files(test_data) / "settlement_test_data.yml")

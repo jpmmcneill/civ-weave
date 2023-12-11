@@ -19,7 +19,7 @@ class File(str, Enum):
     def get_file(self: File) -> TextIOWrapper:
         """Return the given file as it open(...) was called on it."""
         return Path.open(self.get_path)
-    
+
     @property
     def get_path(self: File) -> Path:
         """Return the file path for the given File."""

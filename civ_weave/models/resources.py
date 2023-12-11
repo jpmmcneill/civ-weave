@@ -2,6 +2,7 @@
 
 # an important thing here is fantasy level...
 # there should probably be a few preset fantasy levels. Namely low medium high
+from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
@@ -15,6 +16,7 @@ class FantasyLevel(float, Enum):
     LOW = 1
     MIDDLE = 1.5
     HIGH = 2.3
+
 
 @dataclass
 class RarityConfig:
@@ -34,8 +36,8 @@ class RarityType(str, Enum):
 
     @staticmethod
     def get_probability(index: int, parameter: float):
-        weights = [1 / parameter ** x for x in range(7)]
-        total = sum(weights)
+        weights = [1 / parameter**x for x in range(7)]
+        sum(weights)
         # return weights[index] / total
         return weights
 
@@ -51,7 +53,4 @@ class ResourceConfig:
 def _load_rarity_config() -> dict[RarityType, RarityConfig]:
     with data.File.rarity.get_file as s:
         rarity_data = safe_load(s)
-    return {
-        RarityType(d["name"]): RarityConfig(**d)
-        for d in rarity_data
-    }
+    return {RarityType(d["name"]): RarityConfig(**d) for d in rarity_data}

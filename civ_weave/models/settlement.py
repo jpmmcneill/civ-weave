@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import NamedTuple, Optional
+from typing import NamedTuple
 
 from yaml import safe_load
 
@@ -34,13 +34,14 @@ class SettlementType(NamedTuple):
     CONURBATION = "conurbation"
     """
 
-    hamlet: Optional[SettlementConfig] = None
-    village: Optional[SettlementConfig] = None
-    town: Optional[SettlementConfig] = None
-
+    hamlet: SettlementConfig | None = None
+    village: SettlementConfig | None = None
+    town: SettlementConfig | None = None
 
     @classmethod
     def from_yaml(cls) -> SettlementType:
         with data.File.settlement.get_file as s:
             settlement_data = safe_load(s)
-        return cls(**{d.pop("name"): SettlementConfig(**d) for d in settlement_data})
+        return cls(
+            **{d.pop("name"): SettlementConfig(**d) for d in settlement_data},
+        )
