@@ -39,7 +39,8 @@ class SettlementType(NamedTuple):
     town: SettlementConfig | None = None
 
     @classmethod
-    def from_yaml(cls) -> SettlementType:
+    def from_yaml(cls: SettlementType) -> SettlementType:
+        """Load Settlement configuration data from the yaml config in data."""
         with data.File.settlement.get_file as s:
             settlement_data = safe_load(s)
         return cls(
