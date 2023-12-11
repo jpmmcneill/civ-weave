@@ -2,26 +2,23 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from enum import Enum
+from typing import NamedTuple, Optional
 
 from yaml import safe_load
 
 from civ_weave import data
 
 
-@dataclass
-class SettlementConfig:
+class SettlementConfig(NamedTuple):
     """Representation of a settlement level."""
 
-    name: str
     min_population: int
     max_population: int
     num_important_features: int = 0
     num_resources: int = 0
 
 
-class SettlementType(str, Enum):
+class SettlementType(NamedTuple):
     """
     Available settlement types for a given settlement.
 
@@ -37,18 +34,13 @@ class SettlementType(str, Enum):
     CONURBATION = "conurbation"
     """
 
-    HAMLET = "hamlet"
-    VILLAGE = "village"
-    TOWN = "town"
+    hamlet: Optional[SettlementConfig] = None
+    village: Optional[SettlementConfig] = None
+    town: Optional[SettlementConfig] = None
 
 
-def _load_settlement_config() -> dict[SettlementType, SettlementConfig]:
-    with data.File.settlement.get_file as s:
-        settlement_data = safe_load(s)
-    return {
-        SettlementType(d["name"]): SettlementConfig(**d)
-        for d in settlement_data
-    }
-
-
-SETTLEMENT_CONFIG = _load_settlement_config()
+    @classmethod
+    def from_yaml(cls) -> SettlementType:
+        with data.File.settlement.get_file as s:
+            settlement_data = safe_load(s)
+        return cls(**{d.pop("name"): SettlementConfig(**d) for d in settlement_data})

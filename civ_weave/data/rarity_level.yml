@@ -1,0 +1,20 @@
+- name: abundant
+  description: foo
+  creation_probability: 0.666971637694419
+- name: common
+  creation_probability: 0.222323879231473
+
+- name: uncommon
+  creation_probability: 0.07410795974382434
+
+- name: rare
+  creation_probability: 0.024702653247941447
+
+- name: very_rare
+  creation_probability: 0.008234217749313816
+
+- name: legendary
+  creation_probability: 0.002744739249771272
+
+- name: mythical
+  creation_probability: 0.0009149130832570907

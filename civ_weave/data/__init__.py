@@ -13,8 +13,14 @@ class File(str, Enum):
     """Wrapper to access a file in the data directory."""
 
     settlement = "settlement.yml"
+    rarity = "rarity_level.yml"
 
     @property
     def get_file(self: File) -> TextIOWrapper:
         """Return the given file as it open(...) was called on it."""
-        return Path.open(Path(__file__).parent / self.value)
+        return Path.open(self.get_path)
+    
+    @property
+    def get_path(self: File) -> Path:
+        """Return the file path for the given File."""
+        return Path(__file__).parent / self.value

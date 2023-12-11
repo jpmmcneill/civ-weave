@@ -1,0 +1,6 @@
+- name: hamlet
+  min_population: 50
+  max_population: 100
+- name: village
+  min_population: 200
+  max_population: 500
