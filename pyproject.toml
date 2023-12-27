@@ -24,10 +24,11 @@ yamllint = "^1.33.0"
 select = ["ALL"]
 line-length = 79
 indent-width = 4
-ignore = ["D203", "D212", "ISC001", "PT009"]
+ignore = ["D203", "D212", "ISC001", "PT009", "S311"]
 # D203 and D212 lead to ugly docstrings IMO
 # ISC001 ignored to get rid of a conflict warning (even though it's a good rule)
 # PT009 ignored as it conflicts with S101 for unit tests
+# S311 complains about using python's random module
 
 [build-system]
 requires = ["poetry-core"]
