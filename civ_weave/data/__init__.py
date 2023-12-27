@@ -13,7 +13,8 @@ class File(str, Enum):
     """Wrapper to access a file in the data directory."""
 
     settlement = "settlement.yml"
-    rarity = "rarity_level.yml"
+    resource_rarity = "resource_rarity.yml"
+    resource = "resource.yml"
 
     @property
     def get_file(self: File) -> TextIOWrapper:

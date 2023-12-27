@@ -1,0 +1,12 @@
+- name: common
+  probability: 0.5745
+- name: uncommon
+  probability: 0.3
+- name: rare
+  probability: 0.1
+- name: very_rare
+  probability: 0.02
+- name: legendary
+  probability: 0.005
+- name: mythical
+  probability: 0.0005

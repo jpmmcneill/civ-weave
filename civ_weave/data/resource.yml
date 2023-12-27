@@ -1,0 +1,138 @@
+common:
+  - name: Wheat
+    description: A staple grain used for making bread and other food products
+    resource_type: Grain
+    typical_use: Food
+  - name: Iron Ore
+    description: Commonly found metal used in tools and construction
+    resource_type: Metal
+    typical_use: Crafting
+  - name: Timber
+    description: Wood from various trees, used in building and crafting
+    resource_type: Wood
+    typical_use: Construction
+  - name: Stone
+    description: Used for construction and crafting, found in quarries
+    resource_type: Mineral
+    typical_use: Building
+  - name: Copper
+    description: A soft metal used in electrical wires and plumbing
+    resource_type: Metal
+    typical_use: Crafting
+  - name: Wool
+    description: Fiber obtained from sheep, used in textiles
+    resource_type: Animal product
+    typical_use: Clothing
+  - name: Clay
+    description: A natural material used for pottery and bricks
+    resource_type: Earth
+    typical_use: Crafting
+  - name: Coal
+    description: Used as fuel and in industrial processes
+    resource_type: Fossil fuel
+    typical_use: Energy
+  - name: Herbs
+    description: Various plants used for culinary and medicinal purposes
+    resource_type: Plant
+    typical_use: Food/Medicine
+  - name: Fish
+    description: A primary food source, especially near water bodies
+    resource_type: Animal
+    typical_use: Food
+  - name: Barley
+    description: A grain used in making beer and feed for livestock
+    resource_type: Grain
+    typical_use: Food/Brewing
+  - name: Salt
+    description: Used for preserving food and as a seasoning
+    resource_type: Mineral
+    typical_use: Food
+  - name: Flint
+    description: A type of rock used to start fires and for crafting tools
+    resource_type: Mineral
+    typical_use: Toolmaking
+  - name: Leather
+    description: Treated animal hide used in clothing and goods
+    resource_type: Animal product
+    typical_use: Clothing
+uncommon:
+  - name: Silver
+    description: A precious metal used in currency, jewelry, and ornaments
+    resource_type: Metal
+    typical_use: Currency/Jewelry
+  - name: Gold
+    description: Highly valuable metal used for currency, art, and luxury items
+    resource_type: Metal
+    typical_use: Currency/Art
+  - name: Silk
+    description: A luxurious fabric produced by silkworms, valued in high fashion
+    resource_type: Fabric
+    typical_use: Clothing
+  - name: Spices
+    description: Various rare and exotic spices used for cooking and trade
+    resource_type: Plant
+    typical_use: Food
+  - name: Obsidian
+    description: A volcanic glass used for sharp tools and ornamental items
+    resource_type: Mineral
+    typical_use: Crafting/Decoration
+  - name: Marble
+    description: A metamorphic rock prized for its use in sculpture and architecture
+    resource_type: Rock
+    typical_use: Construction/Art
+  - name: Alchemical Herbs
+    description: Special herbs with properties used in potion making and medicine
+    resource_type: Plant
+    typical_use: Alchemy/Medicine
+rare:
+  - name: Diamonds
+    description: Rare and valuable gemstones used in jewelry and industrial tools
+    resource_type: Gemstone
+    typical_use: Jewelry/Industry
+  - name: Platinum
+    description: A precious metal rarer than gold, used in high-end applications
+    resource_type: Metal
+    typical_use: Industry/Jewelry
+  - name: Enchanted Wood
+    description: Wood from magical trees, used in crafting powerful artifacts
+    resource_type: Wood
+    typical_use: Crafting
+  - name: Crystalized Honey
+    description: Rare honey that has crystallized, prized for its sweetness and healing properties
+    resource_type: Food
+    typical_use: Culinary/Medicine
+  - name: Elemental Crystal
+    description: Crystals containing the essence of natural elements, used in magic
+    resource_type: Crystal
+    typical_use: Magic
+very_rare:
+  - name: Meteorite Iron
+    description: Metal from fallen stars, known for its unique properties and rarity
+    resource_type: Metal
+    typical_use: Crafting
+  - name: Dragon Bone
+    description: The incredibly strong and rare bones of dragons, used in powerful artifacts
+    resource_type: Bone
+    typical_use: Crafting
+  - name: Shadow Silk
+    description: A rare silk made by nocturnal spiders, used in stealth and luxury garments
+    resource_type: Fabric
+    typical_use: Clothing
+legendary:
+  - name: Phoenix Feathers
+    description: Feathers from the mythical phoenix, known for their regenerative properties
+    resource_type: Feather
+    typical_use: Magic/Crafting
+  - name: Unicorn Horn
+    description: The horn of a unicorn, famous for its purity and magical healing abilities
+    resource_type: Horn
+    typical_use: Medicine/Magic
+mythical:
+  - name: Starstone
+    description: A gem said to be from the heart of a fallen star, glowing with inner light
+    resource_type: Gemstone
+    typical_use: Magic/Decoration
+  - name: Moonwood
+    description: A rare type of wood that only grows in moonlit groves, imbued with lunar energy
+    resource_type: Wood
+    typical_use: Magic/Crafting

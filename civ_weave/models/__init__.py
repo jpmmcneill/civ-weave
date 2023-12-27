@@ -7,4 +7,5 @@ from civ_weave.models.settlement import SettlementType
 
 @cache
 def get_settlement_types() -> SettlementType:
+    """Return configured settlement types."""
     return SettlementType.from_yaml()

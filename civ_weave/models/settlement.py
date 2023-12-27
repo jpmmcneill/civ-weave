@@ -24,19 +24,16 @@ class SettlementType(NamedTuple):
 
     This could be a dynamic enum, to facilitate user customisation
     settlement types in future.
-
-    To-Do values:
-    TOWNSHIP = "township"
-    SUBURB = "suburb"
-    CITY = "city"
-    METROPOLIS = "metropolis"
-    MEGALOPOLIS = "megalopolis"
-    CONURBATION = "conurbation"
     """
 
     hamlet: SettlementConfig | None = None
     village: SettlementConfig | None = None
     town: SettlementConfig | None = None
+    township: SettlementConfig | None = None
+    city: SettlementConfig | None = None
+    metropolis: SettlementConfig | None = None
+    megalopolis: SettlementConfig | None = None
+    conurbation: SettlementConfig | None = None
 
     @classmethod
     def from_yaml(cls: SettlementType) -> SettlementType:

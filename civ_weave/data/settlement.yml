@@ -10,3 +10,28 @@
   max_population: 799
   num_important_features: 1
   num_resources: 2
+- name: township
+  min_population: 800
+  max_population: 1999
+  num_important_features: 1
+  num_resources: 3
+- name: city
+  min_population: 2000
+  max_population: 9999
+  num_important_features: 2
+  num_resources: 5
+- name: metropolis
+  min_population: 10000
+  max_population: 29999
+  num_important_features: 3
+  num_resources: 8
+- name: megalopolis
+  min_population: 30000
+  max_population: 99999
+  num_important_features: 5
+  num_resources: 13
+- name: conurbation
+  min_population: 100000
+  max_population: 1000000
+  num_important_features: 8
+  num_resources: 21
