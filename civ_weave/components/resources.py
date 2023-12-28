@@ -100,6 +100,11 @@ class ResourceBucket:
 
         This (by default) removes the drawn resource from the bucket
         that is be used for future draws from the instance.
+
+        Arguments:
+            remove_after_choice(bool, keyword only, default=True):
+                If the picked resource should be removed from the bucket
+                of possible resources for the given ResourceBucket.
         """
         level = self.draw_rarity_level()
         resource = random_choice(
