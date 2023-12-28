@@ -41,30 +41,6 @@ class RarityLevels(NamedTuple):
     mythical: Rarity | None = None
 
 
-@cache
-def _get_rarity_levels() -> RarityLevels:
-    """Load Rarity Type configuration data from the yaml configuration."""
-    with data.File.resource_rarity.get_file as s:
-        settlement_data = safe_load(s)
-    return RarityLevels(
-        **{d["name"]: Rarity(**d) for d in settlement_data},
-    )
-
-
-@cache
-def _get_resources() -> dict[Rarity, set[Resource]]:
-    """Load Resource data from the yaml configuration."""
-    with data.File.resource.get_file as s:
-        resource_data = safe_load(s)
-    rarity_levels = _get_rarity_levels()
-    return {
-        getattr(rarity_levels, level): {
-            Resource(**resource) for resource in values
-        }
-        for level, values in resource_data.items()
-    }
-
-
 class ResourceBucket:
     """Class for generation of random resources."""
 
@@ -102,6 +78,7 @@ class ResourceBucket:
         that is be used for future draws from the instance.
 
         Arguments:
+        ---------
             remove_after_choice(bool, keyword only, default=True):
                 If the picked resource should be removed from the bucket
                 of possible resources for the given ResourceBucket.
@@ -116,3 +93,27 @@ class ResourceBucket:
             self._remove_resource(level, resource)
 
         return level, resource
+
+
+@cache
+def _get_rarity_levels() -> RarityLevels:
+    """Load Rarity Type configuration data from the yaml configuration."""
+    with data.File.resource_rarity.get_file as s:
+        settlement_data = safe_load(s)
+    return RarityLevels(
+        **{d["name"]: Rarity(**d) for d in settlement_data},
+    )
+
+
+@cache
+def _get_resources() -> dict[Rarity, set[Resource]]:
+    """Load Resource data from the yaml configuration."""
+    with data.File.resource.get_file as s:
+        resource_data = safe_load(s)
+    rarity_levels = _get_rarity_levels()
+    return {
+        getattr(rarity_levels, level): {
+            Resource(**resource) for resource in values
+        }
+        for level, values in resource_data.items()
+    }

@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest import TestCase
 from unittest.mock import PropertyMock, patch
 
-from civ_weave.models.settlement import SettlementConfig, SettlementType
+from civ_weave.components.settlement import SettlementConfig, SettlementType
 from tests import data as test_data
 
 

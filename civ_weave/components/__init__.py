@@ -2,7 +2,7 @@
 
 from functools import cache
 
-from civ_weave.models.settlement import SettlementType
+from civ_weave.components.settlement import SettlementType
 
 
 @cache
